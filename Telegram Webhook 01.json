@@ -1,0 +1,69 @@
+{
+  "name": "Telegram Webhook Clean 2",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "telegram",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9236eba9-253f-44eb-8062-7033778a8061",
+      "name": "Webhook",
+      "webhookId": "2d8cbce4-e6da-40eb-a6ad-767874b06f08"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json[\"body\"][\"message\"][\"chat\"][\"id\"] }}",
+        "text": "={{ $json[\"body\"][\"message\"][\"text\"] || \"안녕하세요.\" }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "b718e4a8-ebef-40ba-aa6e-8476f2b52524",
+      "name": "Send a text message",
+      "webhookId": "5187999a-49b3-4d27-a423-88614f5f8248",
+      "credentials": {
+        "telegramApi": {
+          "id": "bFVOudebcBkmk7a4",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "3be6d001-9a9d-497b-b223-425c19fda592",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a61d6a96e034e27bea4e9d3273d7b623de90c9b4257df37d08697578df0747bf"
+  },
+  "id": "TgCleanWebhook2",
+  "tags": []
+}

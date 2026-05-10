@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "n8n": {
+      "type": "sse",
+      "url": "https://n8n-ai-assistant.kopoctc.kr/mcp-server/http",
+      "headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4NDFjMTYyYy1hMWIyLTQxNDctYWE2Zi0xYjA0MTAyYmQ0NmIiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiNWNmNWRiNDYtY2ZiOS00MzJlLTg5ZDgtMzUwMGFmNWJiNjcxIiwiaWF0IjoxNzc4MzczNTIyLCJleHAiOjE3ODA5MzA4MDB9.HQExaxLZjNB7zDkviRrLkaPgQwyrFfNObgM1cG5RyAY"
+      }
+    }
+  }
+}
